@@ -1,0 +1,686 @@
+/*Shanice Talan*/
+/*Travel Agency Style Sheet*/
+
+/*applied to all pages*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arsenal', sans-serif;}
+
+/*fix the issue of the scrollbar preventing images to be displayed inline
+and hide horizontal overflow*/
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background: url('images/beach.jpg');
+  background-attachment: fixed;
+  background-position: top right;
+  background-size: cover;
+}
+
+/*general Links*/
+a, a:visited {
+ cursor:pointer;
+ text-decoration: none;
+ color: white;}
+
+a:hover{
+ cursor:pointer;
+ text-decoration: underline;
+ color: white;}
+
+ /*header for logo, title and navigation bar*/
+ header {
+   height: 100px;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   background: rgba(160, 160, 160, 0.5);}
+
+/*decrease header for bigger screen sizes*/
+@media (min-width: 1081px) {
+  header {
+    height: 85px;
+  }
+ }
+
+/*website logo*/
+ header img {
+   float: left;
+   margin: 5px;
+   width: 75px;
+   height: 75px;}
+
+/*website name*/
+ header h2 {
+   width: 300px;
+   position: absolute;
+   left: 70px;
+   top: 25px;
+   color: white;
+   font-size: 30px;}
+
+/*page backgroud*/
+ .contain {
+   text-align: center;
+   min-height: 100vh;
+   margin-top: 85px;
+   padding-top: 1px;
+   margin-bottom:0;
+   }
+
+ /*navigation*/
+ #login a{
+   float: right;
+   display: inline;
+   padding: 5px;
+   margin: 5px;
+   margin-right: 15px;
+ }
+
+ .nav {
+   position: absolute;
+   top: 0;
+   right: -5px;
+   margin-top: 40px;
+   text-decoration-color: white;}
+
+/*navigation links*/
+.nav li {
+   display: inline;
+   list-style: none;
+   font-size: 24px;
+   margin: 10px;
+   padding: 10px;}
+
+/*hide navigation bar for smaller screens*/
+@media (max-width: 1080px) {
+  .nav {
+    display: none;}
+}
+
+/*show navigation menu button for smaller screens*/
+#navbtn {
+  position: absolute;
+  top: -50px;
+  right: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 7px;
+  background-color: white;
+  color: #347A8A;
+  border: solid 3px white;
+  border-radius: 10px;}
+
+/*change color of button on hover*/
+#navbtn:hover {
+  padding: 10px;
+  background-color: #347A8A;
+  color: white;
+  border-style: none;}
+
+/*change text color of menu on hover*/
+#navbtn a:hover {
+  color: #347A8A;
+  text-decoration: none;}
+
+/*container for navigation menu*/
+#navdrop {
+  position: absolute;
+  top: 90px;
+  right: 0;}
+
+/*hide navigation menu list by default*/
+.nav2 {
+  display: none;}
+
+/*styling for each menu selection*/
+.nav2 li {
+  list-style: none;
+  font-size: 20px;
+  margin: 0;
+  padding: 15px;
+  width: auto;
+  color: #347A8A;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px}
+
+.nav2 a{
+  color: #347A8A;
+}
+
+/*change color of menu background on hover*/
+.nav2 li:hover {
+  background: #347A8A;
+  color: white;}
+
+/*change color of menu link on hover*/
+.nav2 li a:hover {
+  color: white;}
+
+/*show menu list when hovering menu button*/
+#navdrop:hover .nav2 {
+  display: block;
+  position: relative;
+  margin-top: -5px;
+  margin-right: 5px;
+  color: #347A8A;}
+
+/*hide button for bigger screens*/
+@media (min-width: 1081px) {
+  #navbtn {
+    display: none;
+  }
+}
+
+/*Copyright*/
+footer {
+  height: 25px;
+  width: 100vw;
+  position: static;
+  float: right;
+  text-align: right;
+  clear: both;
+  margin-top:0;
+  margin-right: 15px;
+  color: white;
+  font-size: 16px;
+  background: rgba(160, 160, 160, 0.5);}
+
+footer p{
+  right: 25px;
+}
+
+/*bigger font size for bigger screens*/
+@media (min-width: 641px){
+  footer{
+    font-size: 20px;}
+}
+
+.sign {
+  width: 50px;
+  height: 20px;}
+
+/* Homepage*/
+.home {
+  height: 50vh;
+  text-align: left;
+  font-size: 30px;
+  color: #fff;
+  padding: 25vh 0 0 3vw;}
+
+/*bigger font size for bigger screens*/
+@media (min-width: 681px) {
+  .home{
+    font-size: 35px; }
+}
+
+/*Registration page*/
+#register { /*form inside translucent box*/
+  background: rgba(160, 160, 160, 0.7);
+  height: 900px;
+  max-width: 320px;
+  text-align: left;
+  padding: 5vh 5vw;
+  margin: 50px 100px 100px 100px;
+  font-size: 18px;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;}
+
+/*bigger width, padding and font size for bigger screens*/
+@media (min-width: 641px){
+    #register {
+      min-width: 400px;
+      height: 900px;
+      padding: 30px;
+      font-size: 30px;}
+}
+
+/*actual form below title*/
+#regform {
+  margin-top: 0px;
+  text-align: left;
+  font-size: 18px;
+  color: white;}
+
+#regform td {
+  padding: 10px;
+}
+
+
+/*smaller padding and font size for smaller screen size*/
+@media (max-width: 640px) {
+    form td {
+      padding: 5px;
+      font-size: 16px;
+    }
+}
+
+/*styling for registration submition button*/
+#regform button {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 7.5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  background-color: white;
+  color: #347A8A;
+  border: solid 3px #347A8A;
+  border-radius: 10px;
+  }
+
+/*change color on hover and change margin size to account for border size*/
+#regform button:hover {
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 21px;
+  background-color: #347A8A;
+  color: white;
+  border-style: none;
+}
+
+/*styling for input description, hidden on default*/
+.dscrptn {
+  visibility: hidden;
+  height: 20px;
+  font-size: 14px;
+}
+
+/*smaller font for smaller screen size*/
+@media (max-width: 640px) {
+  .dscrptn {
+    font-size: 12px;}
+}
+
+/*Contacts page*/
+#agency {
+  margin: 25px;
+  min-height: 100vh;
+}
+
+#agency ul {
+  background: rgba(160, 160, 160, 0.7);
+  float: left;
+  list-style: none;
+  display: inline;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+#agency li {
+  display: inline;
+  padding: 10px;
+}
+
+#agency h2 {
+  float: left;
+  color: white;
+  margin: 0;
+}
+
+#agency table {
+  background: rgba(160, 160, 160, 0.7);
+  border-radius: 10px;
+  align-content: center;
+  font-size: 20px;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+#agency th {
+  text-transform: uppercase;
+  outline: none;
+}
+
+#agency tr{
+  outline: thin solid;
+}
+
+#agency td {
+  padding: 10px;
+}
+
+/*Packages page*/
+#packages {
+  margin: 25px;
+  font-size: 20px;
+  color: white;}
+
+#packages h2 {
+  margin-bottom: 25px;
+  width: 100%;
+  text-align: left;
+}
+
+.eachpackage {
+  list-style: none;
+  text-align: left;
+  width: 40vw;
+  margin: 25px;
+  padding: 25px;
+  background: rgba(160, 160, 160, 0.7);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.eachpackage h3 {
+  margin: 10px 0;
+}
+
+.eachpackage td {
+  padding: 10px;
+}
+
+.eachpackage button {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  color: #347A8A;
+  background-color: white;
+  color: #347A8A;
+  border: solid 3px #347A8A;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.eachpackage button:hover {
+  color: white;
+  background-color: #347A8A;
+  border-style: 3px none;
+  border-radius: 5px;
+}
+
+#packageBox {
+  background: rgba(160, 160, 160, 0.7);
+  width: 300px;
+  margin: 50px 37vw;
+  padding: 25px;
+  color: white;
+  border-radius: 10px;
+  align-content: center;
+  text-align: left;
+}
+
+#packageBox h2 {
+  margin-bottom: 25px;
+}
+
+#packageBox button {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  color: #347A8A;
+  background-color: white;
+  color: #347A8A;
+  border: solid 3px #347A8A;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#packageBox button:hover {
+  color: white;
+  background-color: #347A8A;
+  border-style: 3px none;
+  border-radius: 5px;
+}
+
+#congratulationBox {
+  background: rgba(160, 160, 160, 0.7);
+  width: 500px;
+  margin: 50px 30vw 200px 30vw;
+  padding: 25px;
+  color: white;
+  border-radius: 10px;
+  align-content: center;
+}
+
+#congratulationBox h2 {
+  margin-bottom: 25px;
+}
+/*Services Page*/
+#services {
+  margin: 25px;
+  font-size: 20px;
+  color: white;}
+
+#services h2 {
+  margin-bottom: 25px;
+  width: 100%;
+  text-align: left;
+}
+
+.servicelogo {
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  margin: 50px 100px;
+  padding: 25px;
+  background: rgba(160, 160, 160, 0.5);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/*Reviews Page*/
+#reviews {
+  margin: 25px;
+  font-size: 20px;
+  color: white;
+}
+
+#reviews h2 {
+  margin-bottom: 25px;
+  width: 100%;
+  text-align: left;
+}
+
+.review li {
+  list-style: none;
+  text-align: left;
+  width: 40vw;
+  margin: 25px;
+  padding: 25px;
+  background: rgba(160, 160, 160, 0.7);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/*Agent Login*/
+#agentlogin {
+  background: rgba(160, 160, 160, 0.5);
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 400px;
+  padding: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+#agentlogin p {
+  margin-bottom: 10px;
+}
+
+#agentlogin td, #agentlogin input {
+padding: 5px;
+font-size: 14px;
+}
+
+#agentlogin button {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  color: #347A8A;
+  background-color: white;
+  color: #347A8A;
+  border: solid 3px #347A8A;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#agentlogin button:hover {
+  color: white;
+  background-color: #347A8A;
+  border-style: 3px none;
+  border-radius: 5px;
+}
+
+#agententry {
+  background: rgba(160, 160, 160, 0.7);
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 500px;
+  padding: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+#welcome {
+  margin-bottom: 25px;
+}
+
+#agententry button {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  color: #8EC1CA;
+  background-color: white;
+  color: #347A8A;
+  border: solid 3px #347A8A;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#agententry button:hover {
+  color: white;
+  background-color: #347A8A;
+  border-style: 3px none;
+  border-radius: 5px;
+}
+
+#dash {
+  display: block;
+}
+
+#addagent {
+  background: rgba(160, 160, 160, 0.7);
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 480px;
+  padding: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+#addagent p {
+  margin-bottom: 10px;
+}
+
+#addagent td, #addagent input {
+padding: 5px;
+font-size: 14px;
+}
+
+#addagent button {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  color: #347A8A;
+  background-color: white;
+  border-style: 3px solid #8EC1CA;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#addagent button:hover {
+  color: white;
+  background-color: #347A8A;
+  border-style: 3px none;
+  border-radius: 5px;
+}
+
+.agtdscrptn{
+visibility: hidden;
+position: relative;
+display:inline;
+font-size: 12px;
+}
+
+#error{
+  color: red;
+  font-size: 16px;
+}
+
+#success{
+  color: green;
+  font-size: 16px;
+}
+
+/* Darren Uong*/
+/* The Modal (background) */
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.3); /* Background color of modal*/
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: lightgrey;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    top: 10px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myModal button {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  color: #347A8A;
+  background-color: white;
+  border-style: 3px solid #8EC1CA;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#myModal button:hover {
+  color: white;
+  background-color: #347A8A;
+  border-style: 3px none;
+  border-radius: 5px;
+}
